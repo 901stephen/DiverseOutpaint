@@ -15,25 +15,30 @@ We study the problem of generating a set of realistic and diverse backgrounds wh
 
 ## Usage
 
-The synthetic experiment and real image experiment codes are in the folder "synthetic_data" and "real_image" respectively. 
+## Modifications
+[*] input and output dims changed from 128x128 to 64x64
+[*] provide train path at img_dir and mask path at mask_dir
+[*] tested on stanford car dataset
+	[*] https://ai.stanford.edu/~jkrause/cars/car_dataset.html
 
+## Mask Generation
+[*] Install depedencies for detectron2
+[*] Setup detectron2 from https://github.com/facebookresearch/detectron2
+[*] Copy mask_generation.py file provided in real_image directory to detectron2/demos
+[*] modify train/ dir and mask/ dir paths in mask_generation.py and 
+[*] execute the file from detectron2 directory 
+	[*] python demo/mask_generation.py
+ 
+<img src='demo_imgs/car_1.jpg' align="middle" width=720>
+<img src='demo_imgs/car_2.jpg' align="middle" width=720>
+<img src='demo_imgs/car_3.jpg' align="middle" width=720>
+<img src='demo_imgs/car_4.jpg' align="middle" width=720>
 
-## Synthetic Results Comparison
-
-<img src='demo_imgs/synthetic_results.png' align="middle" width=720>
-
-## Face Examples
-
-<img src='demo_imgs/sampled_face.png' align="middle" width=720>
-
-## Street Scene Examples
-
-<img src='demo_imgs/sampled_city.png' align="middle" width=720>
 
 
 
 ## Citation
-If you use this code for your research, please cite our [paper](http://openaccess.thecvf.com/content_WACV_2020/papers/Zhang_Multimodal_Image_Outpainting_With_Regularized_Normalized_Diversification_WACV_2020_paper.pdf):
+If you use this code for your research, please cite the [paper](http://openaccess.thecvf.com/content_WACV_2020/papers/Zhang_Multimodal_Image_Outpainting_With_Regularized_Normalized_Diversification_WACV_2020_paper.pdf):
 
 ```
 @inproceedings{zhang2020multimodal,

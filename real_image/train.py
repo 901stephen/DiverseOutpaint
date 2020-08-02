@@ -13,25 +13,29 @@ from data_utils import *
 from vis_tools import *
 from models import *
 from utils import *
+import cv2
 
 # Configurations and Hyperparameters
 mode = 'train'
-port_num = 8092
-batch_size = 16
-gpu_id = 1
+port_num = 8097
+batch_size = 32
+gpu_id = 0
 lr_rate = 2e-4
 num_epochs = 200
-report_feq = 50
+report_feq = 1
 num_sample = 4
 noise_dim = 16
+
+#custom config
+input_size = 64
 
 # Set up data and training gadgets
 display = visualizer(port=port_num)
 
 # Initialize Dataset
-img_dir = '/home/zlz/data/images/'
-mask_dir = '/home/zlz/data/Face_data/masks/eye_nose/'
-transforms = Compose([CenterCrop(135),Resize(128)])
+img_dir = 'train/1/'
+mask_dir = 'masks/1/'
+transforms = Compose([Resize((input_size, input_size))])
 dataset = CelebA(mode, img_dir, mask_dir, transforms = transforms)
 loader = data.DataLoader(dataset, batch_size=batch_size)
 
@@ -51,6 +55,8 @@ fake = 0
 
 # Training
 encoder, decoder, discriminator = encoder.train(), decoder.train(), discriminator.train()
+
+
 total_steps = len(loader)*num_epochs
 step = 0
 high_recon_acc = 0
@@ -171,9 +177,4 @@ for e in range(num_epochs):
 	if e % 2 == 0 and e != 0:
 		adjust_lr_rate(G_optimizer)
 		adjust_lr_rate(D_optimizer)
-
-
-
-
-
 

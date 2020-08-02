@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import pdb
 import plotly
+import matplotlib.pyplot as plt
 from plotly.tools import mpl_to_plotly
-from matplotlib import pyplot as plt
 plt.switch_backend('agg')
 
 class visualizer(object):

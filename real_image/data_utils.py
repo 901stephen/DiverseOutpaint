@@ -15,7 +15,7 @@ class CelebA(data.Dataset):
 		for img_file in glob.glob(str(img_dir)+'*'):
 			image_list.append(img_file)
 			name = img_file.split('/')[-1].split('.')[0]
-			mask.append(str(mask_dir)+str(name)+'.png')
+			mask.append(str(mask_dir)+str(name)+'.jpg')
 		
 		if mode == 'train': 
 			self.image_list = image_list[:200000]
