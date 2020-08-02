@@ -16,18 +16,15 @@ We study the problem of generating a set of realistic and diverse backgrounds wh
 ## Usage
 
 ## Modifications
-input and output dims changed from 128x128 to 64x64.
-provide train path at img_dir and mask path at mask_dir.
-tested on stanford car dataset.
-https://ai.stanford.edu/~jkrause/cars/car_dataset.html.
+1. Input and output dims changed from 128x128 to 64x64. 2. Provide train path at img_dir and mask path at mask_dir. 3. Tested on stanford car dataset. 4. https://ai.stanford.edu/~jkrause/cars/car_dataset.html.
 
 ## Mask Generation
-Install depedencies for detectron2.
-Setup detectron2 from https://github.com/facebookresearch/detectron2.
-Copy mask_generation.py file provided in real_image directory to detectron2/demos.
-modify train/ dir and mask/ dir paths in mask_generation.py and.
-execute the file from detectron2 directory.
-python demo/mask_generation.py.
+1. Install depedencies for detectron2.
+2. Setup detectron2 from https://github.com/facebookresearch/detectron2.
+3. Copy mask_generation.py file provided in real_image directory to detectron2/demos.
+4. Modify train/ dir and mask/ dir paths in mask_generation.py and.
+5. Execute the file from detectron2 directory.
+6. python demo/mask_generation.py.
  
 <img src='demo_imgs/car_1.png' align="middle" width=720>
 <img src='demo_imgs/car_2.png' align="middle" width=720>
