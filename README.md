@@ -29,13 +29,14 @@ We study the problem of generating a set of realistic and diverse backgrounds wh
 5. Execute the file from detectron2 directory.
 6. python demo/mask_generation.py.
  
+## Generated Images
 <img src='demo_imgs/car_1.png' align="middle" width=720>
 <img src='demo_imgs/car_2.png' align="middle" width=720>
 <img src='demo_imgs/car_3.png' align="middle" width=720>
 <img src='demo_imgs/car_4.png' align="middle" width=720>
-
-
-
+<img src='demo_imgs/car_5.png' align="middle" width=720>
+<img src='demo_imgs/car_6.png' align="middle" width=720>
+<img src='demo_imgs/car_7.png' align="middle" width=720>
 
 ## Citation
 If you use this code for your research, please cite the [paper](http://openaccess.thecvf.com/content_WACV_2020/papers/Zhang_Multimodal_Image_Outpainting_With_Regularized_Normalized_Diversification_WACV_2020_paper.pdf):
