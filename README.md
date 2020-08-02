@@ -16,7 +16,10 @@ We study the problem of generating a set of realistic and diverse backgrounds wh
 ## Usage
 
 ## Modifications
-1. Input and output dims changed from 128x128 to 64x64. 2. Provide train path at img_dir and mask path at mask_dir. 3. Tested on stanford car dataset. 4. https://ai.stanford.edu/~jkrause/cars/car_dataset.html.
+1. Input and output dims changed from 128x128 to 64x64.
+2. Provide train path at img_dir and mask path at mask_dir.
+3. Tested on stanford car dataset.
+4. https://ai.stanford.edu/~jkrause/cars/car_dataset.html.
 
 ## Mask Generation
 1. Install depedencies for detectron2.
